@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wikipedia Clone</title>
+    <meta name="description"
+        content="This is an unofficial clone for wikipedia. Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.">
+    <meta name="viewport" content="initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/svg.css">
+</head>
+
+<body>
+    <main>
+        <div class="central-textlogo">
+            <img class="central-featured-logo"
+                src="https://pbs.twimg.com/profile_images/1762496752/fakewiki_400x400.jpg" width="200" height="183" alt>
+            <h1 class="central-textlogo-wrapper">
+                <span class="central-textlogo__image sprite svg-Wikipedia_wordmark">
+                    Wikipedia
+                </span>
+                <strong class="jsl10n localized-slogan" data-jsl10n="portal.slogan">The Encyclopedia Clone</strong>
+            </h1>
+        </div>
+        <nav data-jsl10n="top-ten-nav-label" aria-label="Top languages" class="central-featured"
+            data-el-section="primary links">
+
+            <div class="central-featured-lang lang1" lang="en" dir="ltr">
+                <a id="js-link-box-en" href="http://en.wikipedia.org/" onclick="return false;"
+                    title="English — Wikipedia — The Free Encyclopedia" class="link-box"
+                    data-slogan="The Free Encyclopedia">
+                    <strong>English</strong>
+                    <small>6,796,000+ <span>articles</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang2" lang="ru" dir="ltr">
+                <a id="js-link-box-ru" href="http://ru.wikipedia.org/" onclick="return false;"
+                    title="Russkiy — Википедия — Свободная энциклопедия" class="link-box"
+                    data-slogan="Свободная энциклопедия">
+                    <strong>Русский</strong>
+                    <small>1 969 000+ <span>статей</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang3" lang="ja" dir="ltr">
+                <a id="js-link-box-ja" href="http://ja.wikipedia.org/" title="Nihongo — ウィキペディア — フリー百科事典"
+                    onclick="return false;" class="link-box" data-slogan="フリー百科事典">
+                    <strong>日本語</strong>
+                    <small>1,407,000+ <span>記事</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang4" lang="es" dir="ltr">
+                <a id="js-link-box-es" href="http://es.wikipedia.org/" onclick="return false;"
+                    title="Español — Wikipedia — La enciclopedia libre" class="link-box"
+                    data-slogan="La enciclopedia libre">
+                    <strong>Español</strong>
+                    <small>1.938.000+ <span>artículos</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang5" lang="de" dir="ltr">
+                <a id="js-link-box-de" href="http://de.wikipedia.org/" onclick="return false;"
+                    title="Deutsch — Wikipedia — Die freie Enzyklopädie" class="link-box"
+                    data-slogan="Die freie Enzyklopädie">
+                    <strong>Deutsch</strong>
+                    <small>2.891.000+ <span>Artikel</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang6" lang="fr" dir="ltr">
+                <a id="js-link-box-fr" href="http://fr.wikipedia.org/" onclick="return false;"
+                    title="français — Wikipédia — L’encyclopédie libre" class="link-box"
+                    data-slogan="L’encyclopédie libre">
+                    <strong>Français</strong>
+                    <small>2 598 000+ <span>articles</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang7" lang="it" dir="ltr">
+                <a id="js-link-box-it" href="http://it.wikipedia.org/" onclick="return false;"
+                    title="Italiano — Wikipedia — L&#x27;enciclopedia libera" class="link-box"
+                    data-slogan="L&#x27;enciclopedia libera">
+                    <strong>Italiano</strong>
+                    <small>1.853.000+ <span>voci</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang8" lang="zh" dir="ltr">
+                <a id="js-link-box-zh" href="http://zh.wikipedia.org/" onclick="return false;"
+                    title="Zhōngwén — 维基百科 / 維基百科 — 自由的百科全书 / 自由的百科全書" class="link-box localize-variant"
+                    data-slogan="自由的百科全书 / 自由的百科全書">
+                    <strong>中文</strong>
+                    <small>1,409,000+ <span>条目 / 條目</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang9" lang="fa" dir="rtl">
+                <a id="js-link-box-fa" href="http://fa.wikipedia.org/" title="Fārsi — ویکی‌پدیا — دانشنامهٔ آزاد"
+                    onclick="return false;" class="link-box" data-slogan="دانشنامهٔ آزاد">
+                    <strong><bdi dir="rtl">فارسی</bdi></strong>
+                    <small>۹۹۵٬۰۰۰+ <span>مقاله</span></small>
+                </a>
+            </div>
+
+            <div class="central-featured-lang lang10" lang="pt" dir="ltr">
+                <a id="js-link-box-pt" href="http://pt.wikipedia.org/" onclick="return false;"
+                    title="Português — Wikipédia — A enciclopédia livre" class="link-box"
+                    data-slogan="A enciclopédia livre">
+                    <strong>Português</strong>
+                    <small>1.120.000+ <span>artigos</span></small>
+                </a>
+            </div>
+        </nav>
+        <div role="search" class="search-container">
+            <form class="pure-form" id="search-form" action="http://www.wikipedia.org/search-redirect.php"
+                data-el-section="search">
+                <fieldset>
+                    <input type="hidden" name="family" value="Wikipedia">
+                    <input type="hidden" id="hiddenLanguageInput" name="language" value="en">
+                    <div class="search-input" id="search-input">
+                        <label for="searchInput" class="screen-reader-text"
+                            data-jsl10n="portal.search-input-label">Search Wikipedia</label>
+                        <input id="searchInput" name="search" type="search" size="20" autofocus="autofocus"
+                            accesskey="F" dir="auto" autocomplete="off">
+                        <div class="styled-select no-js">
+                            <div class="hide-arrow">
+                                <select id="searchLanguage" name="language">
+                                    <option value="en" lang="en" selected=selected>English</option><!-- English -->
+                                    <option value="hi" lang="hi">हिन्दी</option><!-- Hindī -->
+                                </select>
+                                <div class="styled-select-active-helper"></div>
+                            </div>
+                            <i class="sprite svg-arrow-down"></i>
+                        </div>
+                    </div>
+                    <button class="pure-button pure-button-primary-progressive" type="submit">
+                        <i class="sprite svg-search-icon" data-jsl10n="search-input-button">Search</i>
+                    </button>
+                    <input type="hidden" value="Go" name="go">
+                </fieldset>
+            </form>
+        </div>
+        <nav data-jsl10n="all-languages-nav-label" aria-label="All languages">
+            <div class="lang-list-button-wrapper">
+                <button id="js-lang-list-button" aria-expanded="false" aria-controls="js-lang-lists"
+                    class="lang-list-button">
+                    <i class="sprite svg-language-icon"></i>
+                    <span class="lang-list-button-text jsl10n" data-jsl10n="portal.language-button-text">Read Wikipedia
+                        in your language </span>
+                    <i class="sprite svg-arrow-down-blue"></i>
+                </button>
+            </div>
+            <div class="lang-list-border"></div>
+            <div class="lang-list-border"></div>
+            <div class="lang-list-container">
+        </nav>
+        <hr>
+    </main>
+    <footer class="footer" data-el-section="other projects">
+        <div class="footer-sidebar">
+            <div class="footer-sidebar-content">
+                <div class="footer-sidebar-icon sprite svg-Wikimedia-logo_black">
+                </div>
+                <div class="footer-sidebar-text jsl10n" data-jsl10n="portal.footer-description">
+                    Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range
+                    of other projects.
+                </div>
+                <div class="footer-sidebar-text">
+                    <a href="https://donate.wikimedia.org/?utm_medium=portal&amp;utm_campaign=portalFooter&amp;utm_source=portalFooter"
+                        onclick="return false;" target="_blank">
+                        <span class="jsl10n" data-jsl10n="footer-donate">You can support our work with a
+                            donation.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-sidebar app-badges">
+            <div class="footer-sidebar-content">
+                <div class="footer-sidebar-text">
+                    <div class="footer-sidebar-icon sprite svg-wikipedia_app_tile"></div>
+                    <strong class="jsl10n" data-jsl10n="portal.app-links.title">
+                        <a class="jsl10n" data-jsl10n="portal.app-links.url" onclick="return false;"
+                            href="https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications">
+                            Download Wikipedia for Android or iOS
+                        </a>
+                    </strong>
+                    <p class="jsl10n" data-jsl10n="portal.app-links.description">
+                        Save your favorite articles to read offline, sync your reading lists across devices and
+                        customize your reading experience with the official Wikipedia app.
+                    </p>
+                    <ul>
+                        <li class="app-badge app-badge-android">
+                            <a target="_blank" rel="noreferrer" onclick="return false;"
+                                href="https://play.google.com/store/apps/details?id=org.wikipedia&amp;referrer=utm_source%3Dportal%26utm_medium%3Dbutton%26anid%3Dadmob">
+                                <span class="jsl10n sprite svg-badge_google_play_store"
+                                    data-jsl10n="portal.app-links.google-store">Google Play Store</span>
+                            </a>
+                        </li>
+                        <li class="app-badge app-badge-ios">
+                            <a target="_blank" rel="noreferrer" onclick="return false;"
+                                href="https://itunes.apple.com/app/apple-store/id324715238?pt=208305&amp;ct=portal&amp;mt=8">
+                                <span class="jsl10n sprite svg-badge_ios_app_store"
+                                    data-jsl10n="portal.app-links.apple-store">Apple App Store</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav data-jsl10n="other-projects-nav-label" aria-label="Other projects" class="other-projects">
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://commons.wikimedia.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Commons-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="commons.name">Commons</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="commons.slogan">Free media
+                            collection</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikivoyage.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikivoyage-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikivoyage.name">Wikivoyage</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikivoyage.slogan">Free travel
+                            guide</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wiktionary.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wiktionary-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wiktionary.name">Wiktionary</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wiktionary.slogan">Free
+                            dictionary</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikibooks.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikibooks-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikibooks.name">Wikibooks</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikibooks.slogan">Free textbooks</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikinews.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikinews-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikinews.name">Wikinews</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikinews.slogan">Free news source</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikidata.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikidata-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikidata.name">Wikidata</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikidata.slogan">Free knowledge
+                            base</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikiversity.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikiversity-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikiversity.name">Wikiversity</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikiversity.slogan">Free learning
+                            resources</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikiquote.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikiquote-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikiquote.name">Wikiquote</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikiquote.slogan">Free quote
+                            compendium</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.mediawiki.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-MediaWiki-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="mediawiki.name">MediaWiki</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="mediawiki.slogan">Free &amp; open wiki
+                            software</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikisource.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikisource-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikisource.name">Wikisource</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikisource.slogan">Free content
+                            library</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://species.wikimedia.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikispecies-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikispecies.name">Wikispecies</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikispecies.slogan">Free species
+                            directory</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://www.wikifunctions.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Wikifunctions-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="wikifunctions.name">Wikifunctions</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="wikifunctions.slogan">Free function
+                            library</span>
+                    </div>
+                </a>
+            </div>
+            <div class="other-project">
+                <a class="other-project-link" onclick="return false;" href="http://meta.wikimedia.org/">
+                    <div class="other-project-icon">
+                        <div class="sprite svg-Meta-Wiki-logo_sister"></div>
+                    </div>
+                    <div class="other-project-text">
+                        <span class="other-project-title jsl10n" data-jsl10n="metawiki.name">Meta-Wiki</span>
+                        <span class="other-project-tagline jsl10n" data-jsl10n="metawiki.slogan">Community coordination
+                            &amp; documentation</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <hr>
+        <p class="site-license">
+            <small class="jsl10n" data-jsl10n="license">This website is an unofficial clone of <a
+                    href="https://wikipedia.org/">Wikipedia</a> and in no way affiliated to it.</small>
+        </p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dist/index-24c3e2ca18.js"></script>
+    <script src="assets/js/dist/gt-ie9-ce3fe8e88d.js"></script>
+</body>
+
+</html>
