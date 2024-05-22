@@ -17,3 +17,25 @@ wmL10nVisible = {
     }
 };
 window.setTimeout(wmL10nVisible.makeVisible, 1000)
+
+
+
+const iusername = document.getElementById('iusername');
+
+function checkIfLoggedIn() {
+    const userData = localStorage.getItem('user');
+    if (userData) {
+        const user = JSON.parse(userData);
+        iusername.innerHTML = user.username;
+    }
+    else{
+        window.location.href = './login.html';
+    }
+}
+
+checkIfLoggedIn();
+
+function handleLogout() {
+    localStorage.removeItem('user');
+    window.location.href = './login.html';
+}

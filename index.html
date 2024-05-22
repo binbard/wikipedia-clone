@@ -8,11 +8,21 @@
         content="This is an unofficial clone for wikipedia. Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.">
     <meta name="viewport" content="initial-scale=1">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/wiki.css">
     <link rel="stylesheet" href="assets/css/svg.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <span id="user-info">Welcome, <span id="iusername">Username</span></span>
+                <button id="logout-button" onclick="handleLogout()">Logout</button>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="central-textlogo">
             <img class="central-featured-logo"
